@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 12: ¡Entrega Final (Prototipo Avanzado)! – Envío Digital VIP</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            list-style: none;
+            display: block;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;}
+
+        summary {
+           display: block;
+           list-style: none;
+        }
+        summary::-webkit-details-marker {
+           display: none;
+        }
+
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            }
+        }
+
+        window.onload = () => {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 12: ¡Entrega Final (Prototipo Avanzado)! – Envío Digital VIP</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 Resumen de Sesión</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Realizar las últimas verificaciones funcionales del Prototipo Avanzado.</li>
+                                <li>Asegurar que el prototipo esté completamente listo y pulido para la entrega final.</li>
+                                <li>Preparar y ejecutar la entrega digital del archivo final del proyecto Scratch al profesor.</li>
+                            </ul>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong>
+                            <ul>
+                                <li>Archivo final del Prototipo Avanzado (.sb3) guardado con nomenclatura VIP.</li>
+                                <li>Prototipo completamente verificado (funcionalidad y pulido).</li>
+                                <li>Proyecto entregado exitosamente al profesor según el método especificado.</li>
+                            </ul>
+                             <strong>🛠️ Materiales/Preparación:</strong>
+                            <ul>
+                                <li>Dispositivos con acceso a Scratch y los Prototipos Avanzados finalizados.</li>
+                                <li>Tablero Kanban de cada equipo (tareas relevantes en "¡Listo!").</li>
+                                <li>Acceso al T-Bar final y diseño completo (para checklist opcional).</li>
+                                <li>Instrucciones CLARAS y PREPARADAS sobre el método de entrega digital (link a carpeta, plataforma, etc.).</li>
+                                <li>Proyector o pantalla.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: ¡El Gran Final! Saludo y Meta de Entrega -->
+        <div id="activity-1" class="activity">
+             <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🏆 Actividad 1: ¡El Gran Final! Saludo y Meta de Entrega ⏰ Tiempo: 2 minutos</div>
+             </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (2 min):</strong> Saludar con entusiasmo. Establecer el objetivo claro: la entrega final del Prototipo Avanzado.
+                                (<strong>Proyectar Diapositiva 1</strong>: Título "Sesión 12: ¡ENTREGA FINAL VIP!" y Objetivo: "Verificar, guardar y entregar nuestro increíble Prototipo Avanzado").
+                            </td>
+                            <td>
+                                "¡Equipos Pro, ha llegado el momento culminante! ¡Hoy es la Sesión 12, la Gran Final del Prototipo Avanzado! 🚀✨ Hoy realizaremos las últimas verificaciones, guardaremos nuestra obra maestra y haremos la entrega oficial."
+                                <br><br>
+                                "Este es el momento de la verdad, donde todo su esfuerzo, creatividad y trabajo en equipo se materializa. ¡Prepárense para el envío digital VIP!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: ¡Checklist Final! Preparación para Entrega -->
+        <div id="activity-2" class="activity">
+             <div class="banner" onclick="toggleContent('activity_2_content')">
+                 <div class="title">📋 Actividad 2: ¡Checklist Final! Preparación para Entrega ⏰ Tiempo: 33 minutos</div>
+             </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (15 min):</strong> Facilitar una última prueba completa (Revisión Funcional VIP) por parte de cada equipo. Verificar todas las interacciones clave.
+                                (<strong>Proyectar Diapositiva 2</strong>: Título "Revisión Funcional VIP ✅" con icono de checklist exhaustivo).
+                            </td>
+                            <td>
+                                "Antes del envío, hagamos una última Revisión Funcional VIP. ¡Queremos asegurarnos de que todo funciona fluidamente!"
+                                <br><br>
+                                "Equipos, ejecuten su prototipo avanzado completo. Prueben TODAS las interacciones principales y secundarias que implementaron. Naveguen por todas las partes."
+                                <br><br>
+                                "Pregúntense: ¿Funciona todo como se espera? ¿Es fluido? ¿No hay ningún bug crítico de última hora?"
+                                <br><br>
+                                "¡Esta es la prueba final de calidad antes de empaquetarlo!"
+                                <br><br>
+                                <em>(Circular y observar las pruebas finales de los equipos. Ayudar a resolver SOLO problemas críticos inesperados que impidan la entrega).</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (5 min):</strong> Guiar el guardado final con nomenclatura VIP.
+                                (<strong>Proyectar Diapositiva 3</strong>: Título "Guardado VIP 💾✨" con instrucción clara de nomenclatura final, ej: Equipo_Nombre_ODSXX_PrototipoAvanzado_FINAL.sb3).
+                            </td>
+                            <td>
+                                "¡Prototipo verificado! Ahora, el guardado definitivo, ¡el Guardado VIP!"
+                                <br><br>
+                                "Vayan a 'Archivo' -> 'Guardar en tu ordenador'. El nombre es crucial para la entrega final:"
+                                <br><br>
+                                "Nómbrelo así: <strong>[NombreDeSuEquipo]_[ODSQueTrabajaron]_PrototipoAvanzado_FINAL.sb3</strong>. Por ejemplo: 'Equipo_SuperEstrellas_ODS15_PrototipoAvanzado_FINAL.sb3'."
+                                <br><br>
+                                "¡Asegúrense de que sea la versión correcta y guárdenla con este nombre exacto!"
+                                <br><br>
+                                <em>(Supervisar el proceso de guardado, verificar que usen la nomenclatura correcta).</em>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 3 (5 min):</strong> (Opcional) Realizar un breve checklist comparando rápidamente el prototipo final con las features principales del T-Bar.
+                                (<strong>Proyectar Diapositiva 4</strong>: Título "(Opcional) Checklist vs. T-Bar 📋". Visual simple del T-Bar con checkmarks).
+                            </td>
+                            <td>
+                                <em>(Este paso es opcional, si el tiempo y el enfoque lo permiten)</em>
+                                <br>
+                                "Opcionalmente, si quieren hacer una última conexión con su plan original: Miren su T-Bar y su prototipo final. ¿Lograron implementar las características principales que planificaron? ¿Se refleja la esencia de su idea?"
+                                <br><br>
+                                "Es un buen momento para apreciar cuánto de su visión inicial lograron convertir en realidad."
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 4 (3 min):</strong> Mover tarjeta simbólica "Preparar Entrega Avanzada" a "¡Listo!" en Kanban.
+                                (<strong>Proyectar Diapositiva 5</strong>: Título "¡Todo Listo en Kanban! ✅". Visual del Kanban moviendo la tarjeta final a '¡Listo!').
+                            </td>
+                            <td>
+                                "¡Para reflejar que estamos listos en nuestro flujo de trabajo! Arquitectos/as, muevan esa tarjeta simbólica final, 'Preparar Entrega Avanzada', a la columna de '¡Listo! (✅)'."
+                                <br><br>
+                                "¡Kanban completado para el Prototipo Avanzado!"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 5 (5 min):</strong> Ofrecer apoyo final para dudas técnicas menores relacionadas con el guardado o la preparación del archivo.
+                            </td>
+                            <td>
+                                "Última llamada para dudas técnicas MUY rápidas sobre el guardado o cómo tener el archivo listo para el envío. ¿Alguien necesita ayuda de último minuto?"
+                                <br><br>
+                                <em>(Resolver dudas puntuales y rápidas relacionadas exclusivamente con la preparación del archivo final).</em>
+                                <br><br>
+                                "¡Perfecto! ¡Sus Prototipos Avanzados están guardados y listos para el envío!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: ¡Prototipo Enviado! Entrega Guiada -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                <div class="title">📨 Actividad 3: ¡Prototipo Enviado! Entrega Guiada ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (2 min):</strong> Facilitador da instrucciones precisas y claras para la entrega del archivo digital (subir a plataforma, compartir enlace, guardar en USB específico, etc.).
+                                (<strong>Proyectar Diapositiva 6</strong>: Título "Instrucciones de Entrega VIP 📨" con los pasos EXACTOS y CLAROS del método de entrega elegido).
+                            </td>
+                            <td>
+                                "¡Atención, Equipos Pro! Este es el momento del Envío Digital VIP. Les voy a dar las instrucciones exactas para entregar su archivo final <strong>[NombreDeSuEquipo]_[ODS...]_FINAL.sb3</strong>."
+                                <br><br>
+                                <em>(Dar aquí las instrucciones PRECISAS y preparadas de antemano. Ser muy claro y si es posible, mostrar los pasos en pantalla):</em>
+                                <br>
+                                "1. Abran [Carpeta Compartida / Plataforma Educativa / etc.]."
+                                <br>
+                                "2. Naveguen a [Ubicación específica]."
+                                <br>
+                                "3. Suban / Adjunten / Copien su archivo .sb3 final."
+                                <br>
+                                "4. Verifiquen que se haya subido/enviado correctamente."
+                                <br><br>
+                                "¿Entendidas las instrucciones? ¿Alguna duda sobre CÓMO entregar?"
+                                <br><br>
+                                <em>(Aclarar dudas sobre el proceso de entrega únicamente).</em>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 2 (3 min):</strong> Equipos realizan el proceso de entrega digital guiados por el facilitador. Facilitador verifica recepciones (si es posible).
+                            </td>
+                            <td>
+                                "¡Perfecto! Ahora, sigan las instrucciones y realicen la entrega de su archivo final."
+                                <br><br>
+                                "Tienen 3 minutos para completar el proceso. ¡Con cuidado y atención!"
+                                <br><br>
+                                <em>(Supervisar el proceso de entrega. Ayudar si algún equipo tiene problemas técnicos con la plataforma/método de entrega. Si es posible, verificar en tiempo real que los archivos están siendo recibidos).</em>
+                                <br><br>
+                                "¿Todos pudieron enviar/subir su archivo?" <em>(Hacer una comprobación final).</em>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 3 (Integrado al final):</strong> Cierre y Celebración del logro.
+                                (<strong>Proyectar Diapositiva 7</strong>: Título "¡PROTOTIPO AVANZADO ENTREGADO! 🎉🥳" con imagen de celebración máxima).
+                            </td>
+                            <td>
+                                "¡¡¡SIIIIII!!! ¡Prototipos Avanzados entregados! ¡¡FELICIDADES, Equipos Pro!!"
+                                <br><br>
+                                "¡Han completado la misión avanzada! Han diseñado, construido, probado, integrado, pulido y entregado un proyecto increíble. ¡El viaje ha sido intenso pero miren lo que han logrado!"
+                                <br><br>
+                                "¡Su Arte Interactivo ODS está listo para inspirar y marcar la diferencia! ¡Siéntanse enormemente orgullosos de su trabajo, su colaboración y su talento!"
+                                <br><br>
+                                "¡Un aplauso GIGANTE para todos ustedes, Gnius!" <em>(Liderar aplauso).</em>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
