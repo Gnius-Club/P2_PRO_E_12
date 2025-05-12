@@ -14,12 +14,21 @@
             color: white;
             padding: 10px;
             cursor: pointer;
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Adjusted for spacing */
             font-weight: bold;
             list-style: none;
             display: block;
+            border-radius: 5px; /* Rounded corners for banner */
         }
-        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        .content { 
+            display: none; 
+            padding: 15px; 
+            border: 1px solid #ddd; 
+            margin-bottom: 10px; 
+            border-radius: 5px; /* Rounded corners for content */
+            margin-top: -10px; /* Visual connection with banner */
+            padding-top: 20px; /* Avoid text clash */
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -43,13 +52,16 @@
         }
         .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;}
 
-        summary {
-           display: block;
-           list-style: none;
+        /* Making facilitator instructions clearer */
+        td em, td i { /* Style for italicized facilitator notes */
+            color: #555;
+            font-style: italic;
+            display: block; /* Put notes on new lines */
+            margin-top: 5px;
         }
-        summary::-webkit-details-marker {
-           display: none;
-        }
+        /* Ensure step <strong> tags render bold */
+        td strong { font-weight: bold; } /* General strong for keywords */
+        td > strong { display: block; margin-bottom: 5px; } /* For step headers */
 
     </style>
     <script>
@@ -69,6 +81,11 @@
             contents.forEach(content => {
                 content.style.display = 'none';
             });
+            // Open "Resumen de Sesión" by default
+            const resumenContent = document.getElementById('activity_0_content');
+            if (resumenContent) {
+                resumenContent.style.display = 'block';
+            }
         };
     </script>
 </head>
@@ -84,7 +101,7 @@
             <div class="banner" onclick="toggleContent('activity_0_content')">
                 <div class="title">📝 Resumen de Sesión</div>
             </div>
-            <div id="activity_0_content" class="content">
+            <div id="activity_0_content" class="content" style="display: block;">
                 <table>
                     <tr>
                         <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
@@ -135,8 +152,12 @@
                     <tbody>
                         <tr>
                             <td>
-                                <strong>Paso 1 (2 min):</strong> Saludar con entusiasmo. Establecer el objetivo claro: la entrega final del Prototipo Avanzado.
-                                (<strong>Proyectar Diapositiva 1</strong>: Título "Sesión 12: ¡ENTREGA FINAL VIP!" y Objetivo: "Verificar, guardar y entregar nuestro increíble Prototipo Avanzado").
+                                <strong>Paso 1 (2 min):</strong>
+                                <ul>
+                                    <li>Saludar con entusiasmo.</li>
+                                    <li>Establecer el objetivo claro: la entrega final del Prototipo Avanzado.</li>
+                                    <li><strong>Proyectar Diapositiva 1</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Equipos Pro, ha llegado el momento culminante! ¡Hoy es la Sesión 12, la Gran Final del Prototipo Avanzado! 🚀✨ Hoy realizaremos las últimas verificaciones, guardaremos nuestra obra maestra y haremos la entrega oficial."
@@ -165,8 +186,12 @@
                     <tbody>
                         <tr>
                             <td>
-                                <strong>Paso 1 (15 min):</strong> Facilitar una última prueba completa (Revisión Funcional VIP) por parte de cada equipo. Verificar todas las interacciones clave.
-                                (<strong>Proyectar Diapositiva 2</strong>: Título "Revisión Funcional VIP ✅" con icono de checklist exhaustivo).
+                                <strong>Paso 1 (15 min):</strong>
+                                <ul>
+                                    <li>Facilitar una última prueba completa (Revisión Funcional VIP) por parte de cada equipo.</li>
+                                    <li>Verificar todas las interacciones clave.</li>
+                                    <li><strong>Proyectar Diapositiva 2</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "Antes del envío, hagamos una última Revisión Funcional VIP. ¡Queremos asegurarnos de que todo funciona fluidamente!"
@@ -182,8 +207,11 @@
                         </tr>
                         <tr>
                             <td>
-                                <strong>Paso 2 (5 min):</strong> Guiar el guardado final con nomenclatura VIP.
-                                (<strong>Proyectar Diapositiva 3</strong>: Título "Guardado VIP 💾✨" con instrucción clara de nomenclatura final, ej: Equipo_Nombre_ODSXX_PrototipoAvanzado_FINAL.sb3).
+                                <strong>Paso 2 (5 min):</strong>
+                                <ul>
+                                    <li>Guiar el guardado final con nomenclatura VIP.</li>
+                                    <li><strong>Proyectar Diapositiva 3</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Prototipo verificado! Ahora, el guardado definitivo, ¡el Guardado VIP!"
@@ -199,8 +227,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 3 (5 min):</strong> (Opcional) Realizar un breve checklist comparando rápidamente el prototipo final con las features principales del T-Bar.
-                                (<strong>Proyectar Diapositiva 4</strong>: Título "(Opcional) Checklist vs. T-Bar 📋". Visual simple del T-Bar con checkmarks).
+                                <strong>Paso 3 (5 min):</strong>
+                                <ul>
+                                    <li>(Opcional) Realizar un breve checklist comparando rápidamente el prototipo final con las features principales del T-Bar.</li>
+                                    <li><strong>Proyectar Diapositiva 4</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 <em>(Este paso es opcional, si el tiempo y el enfoque lo permiten)</em>
@@ -212,8 +243,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 4 (3 min):</strong> Mover tarjeta simbólica "Preparar Entrega Avanzada" a "¡Listo!" en Kanban.
-                                (<strong>Proyectar Diapositiva 5</strong>: Título "¡Todo Listo en Kanban! ✅". Visual del Kanban moviendo la tarjeta final a '¡Listo!').
+                                <strong>Paso 4 (3 min):</strong>
+                                <ul>
+                                    <li>Mover tarjeta simbólica "Preparar Entrega Avanzada" a "¡Listo!" en Kanban.</li>
+                                    <li><strong>Proyectar Diapositiva 5</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Para reflejar que estamos listos en nuestro flujo de trabajo! Arquitectos/as, muevan esa tarjeta simbólica final, 'Preparar Entrega Avanzada', a la columna de '¡Listo! (✅)'."
@@ -223,7 +257,10 @@
                         </tr>
                         <tr>
                             <td>
-                                <strong>Paso 5 (5 min):</strong> Ofrecer apoyo final para dudas técnicas menores relacionadas con el guardado o la preparación del archivo.
+                                <strong>Paso 5 (5 min):</strong>
+                                <ul>
+                                    <li>Ofrecer apoyo final para dudas técnicas menores relacionadas con el guardado o la preparación del archivo.</li>
+                                </ul>
                             </td>
                             <td>
                                 "Última llamada para dudas técnicas MUY rápidas sobre el guardado o cómo tener el archivo listo para el envío. ¿Alguien necesita ayuda de último minuto?"
@@ -254,8 +291,11 @@
                     <tbody>
                         <tr>
                             <td>
-                                <strong>Paso 1 (2 min):</strong> Facilitador da instrucciones precisas y claras para la entrega del archivo digital (subir a plataforma, compartir enlace, guardar en USB específico, etc.).
-                                (<strong>Proyectar Diapositiva 6</strong>: Título "Instrucciones de Entrega VIP 📨" con los pasos EXACTOS y CLAROS del método de entrega elegido).
+                                <strong>Paso 1 (2 min):</strong>
+                                <ul>
+                                    <li>Facilitador da instrucciones precisas y claras para la entrega del archivo digital.</li>
+                                    <li><strong>Proyectar Diapositiva 6</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Atención, Equipos Pro! Este es el momento del Envío Digital VIP. Les voy a dar las instrucciones exactas para entregar su archivo final <strong>[NombreDeSuEquipo]_[ODS...]_FINAL.sb3</strong>."
@@ -277,7 +317,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 2 (3 min):</strong> Equipos realizan el proceso de entrega digital guiados por el facilitador. Facilitador verifica recepciones (si es posible).
+                                <strong>Paso 2 (3 min):</strong>
+                                <ul>
+                                    <li>Equipos realizan el proceso de entrega digital guiados por el facilitador.</li>
+                                    <li>Facilitador verifica recepciones (si es posible).</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Perfecto! Ahora, sigan las instrucciones y realicen la entrega de su archivo final."
@@ -291,8 +335,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 3 (Integrado al final):</strong> Cierre y Celebración del logro.
-                                (<strong>Proyectar Diapositiva 7</strong>: Título "¡PROTOTIPO AVANZADO ENTREGADO! 🎉🥳" con imagen de celebración máxima).
+                                <strong>Paso 3 (Integrado al final):</strong>
+                                <ul>
+                                    <li>Cierre y Celebración del logro.</li>
+                                    <li><strong>Proyectar Diapositiva 7</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡¡¡SIIIIII!!! ¡Prototipos Avanzados entregados! ¡¡FELICIDADES, Equipos Pro!!"
